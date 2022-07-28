@@ -28,8 +28,145 @@ namespace CalangoGames
         {
             ""name"": ""Player"",
             ""id"": ""11df6103-0a1b-4eea-bc43-fae823d52f94"",
-            ""actions"": [],
-            ""bindings"": []
+            ""actions"": [
+                {
+                    ""name"": ""MoveKeyboard"",
+                    ""type"": ""Value"",
+                    ""id"": ""c568568e-37c7-44a9-83bb-068492a21851"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Touch"",
+                    ""type"": ""Button"",
+                    ""id"": ""16446b94-fbc1-456d-bdeb-29101ede112a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TouchPosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""7ad72b80-abb7-4abb-a700-39506d2d7204"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d03974d-9aab-4183-8943-6c7a7ac5b64b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""549558d7-2437-455f-893e-2fe6abecee0c"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveKeyboard"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""db6ca0f2-7cb7-4b7d-ba10-c01fa9911961"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MoveKeyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""89fa44ff-997d-49a1-8609-92a5f61086e8"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MoveKeyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""e9e33696-48bc-4bf2-8de2-ae9505e2c6a5"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MoveKeyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""692d4a8e-2501-4384-8180-f2d4f898b293"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MoveKeyboard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""63a98618-5ea9-4789-b712-8258a66891b9"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Touch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""25635698-c94f-49c3-a532-669d6a92b443"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""TouchPosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6022758c-69e4-4bca-b4c4-36e22bb1cef9"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed3dc177-c8a1-418c-b346-b614aaf33b05"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -59,6 +196,10 @@ namespace CalangoGames
 }");
             // Player
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+            m_Player_MoveKeyboard = m_Player.FindAction("MoveKeyboard", throwIfNotFound: true);
+            m_Player_Touch = m_Player.FindAction("Touch", throwIfNotFound: true);
+            m_Player_TouchPosition = m_Player.FindAction("TouchPosition", throwIfNotFound: true);
+            m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -118,10 +259,18 @@ namespace CalangoGames
         // Player
         private readonly InputActionMap m_Player;
         private IPlayerActions m_PlayerActionsCallbackInterface;
+        private readonly InputAction m_Player_MoveKeyboard;
+        private readonly InputAction m_Player_Touch;
+        private readonly InputAction m_Player_TouchPosition;
+        private readonly InputAction m_Player_Interact;
         public struct PlayerActions
         {
             private @InputActions m_Wrapper;
             public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+            public InputAction @MoveKeyboard => m_Wrapper.m_Player_MoveKeyboard;
+            public InputAction @Touch => m_Wrapper.m_Player_Touch;
+            public InputAction @TouchPosition => m_Wrapper.m_Player_TouchPosition;
+            public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -131,10 +280,34 @@ namespace CalangoGames
             {
                 if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
                 {
+                    @MoveKeyboard.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveKeyboard;
+                    @MoveKeyboard.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveKeyboard;
+                    @MoveKeyboard.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveKeyboard;
+                    @Touch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouch;
+                    @Touch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouch;
+                    @Touch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouch;
+                    @TouchPosition.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPosition;
+                    @TouchPosition.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPosition;
+                    @TouchPosition.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchPosition;
+                    @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
                 {
+                    @MoveKeyboard.started += instance.OnMoveKeyboard;
+                    @MoveKeyboard.performed += instance.OnMoveKeyboard;
+                    @MoveKeyboard.canceled += instance.OnMoveKeyboard;
+                    @Touch.started += instance.OnTouch;
+                    @Touch.performed += instance.OnTouch;
+                    @Touch.canceled += instance.OnTouch;
+                    @TouchPosition.started += instance.OnTouchPosition;
+                    @TouchPosition.performed += instance.OnTouchPosition;
+                    @TouchPosition.canceled += instance.OnTouchPosition;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
                 }
             }
         }
@@ -159,6 +332,10 @@ namespace CalangoGames
         }
         public interface IPlayerActions
         {
+            void OnMoveKeyboard(InputAction.CallbackContext context);
+            void OnTouch(InputAction.CallbackContext context);
+            void OnTouchPosition(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
     }
 }

@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -9663,12 +9663,12 @@ TextureImporter:
       roguelikeChar_transparent1_324: 1080922550
       roguelikeChar_transparent1_80: -927302784
       roguelikeChar_transparent1_438: 1655841992
-      roguelikeChar_transparent1_278: -315625513
       roguelikeChar_transparent1_434: 600359515
+      roguelikeChar_transparent1_189: -1252928691
       roguelikeChar_transparent1_289: 256887237
       roguelikeChar_transparent1_382: 1484559308
       roguelikeChar_transparent1_418: -616495165
-      roguelikeChar_transparent1_189: -1252928691
+      roguelikeChar_transparent1_278: -315625513
       roguelikeChar_transparent1_15: 468546793
       roguelikeChar_transparent1_126: -1514943667
       roguelikeChar_transparent1_413: -908526977

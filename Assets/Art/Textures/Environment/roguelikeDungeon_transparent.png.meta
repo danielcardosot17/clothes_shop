@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -11100,7 +11100,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      roguelikeDungeon_transparent_335: 1983699855
+      roguelikeDungeon_transparent_247: -1283651615
       roguelikeDungeon_transparent_309: -124376473
       roguelikeDungeon_transparent_518: 1057859195
       roguelikeDungeon_transparent_494: -1310686835
@@ -11619,8 +11619,8 @@ TextureImporter:
       roguelikeDungeon_transparent_193: -366969090
       roguelikeDungeon_transparent_172: -2031914441
       roguelikeDungeon_transparent_12: 1458009404
+      roguelikeDungeon_transparent_335: 1983699855
       roguelikeDungeon_transparent_399: 512486151
-      roguelikeDungeon_transparent_247: -1283651615
       roguelikeDungeon_transparent_513: -2008565338
   spritePackingTag: 
   pSDRemoveMatte: 0
