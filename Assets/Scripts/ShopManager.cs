@@ -6,16 +6,11 @@ namespace CalangoGames
 {
     public class ShopManager : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [SerializeField] private Canvas shopCanvas;
+        private MoneyManager moneyManager;
 
-        // Update is called once per frame
-        void Update()
-        {
-        
+        private void Awake() {
+            moneyManager = FindObjectOfType<MoneyManager>();
         }
     }
 }

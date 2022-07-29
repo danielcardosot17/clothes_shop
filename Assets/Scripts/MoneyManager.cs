@@ -1,21 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace CalangoGames
 {
     public class MoneyManager : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        [SerializeField] private TMP_Text moneyText;
+        [SerializeField][Range(0, 300)] private int money = 100;
     }
 }
