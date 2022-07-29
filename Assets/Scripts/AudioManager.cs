@@ -23,7 +23,8 @@ namespace CalangoGames
 
         public void PlayMusic(string musicName)
         {
-            var sound = soundEffcts.Find(sound => sound.name == musicName);
+            if(musics.Count == 0) return;
+            var sound = musics.Find(sound => sound.name == musicName);
             audioSource.clip = sound.clip;
             audioSource.priority = sound.priority;
             audioSource.volume = sound.volume;

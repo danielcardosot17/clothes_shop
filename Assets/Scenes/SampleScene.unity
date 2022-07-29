@@ -2579,6 +2579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566805857}
+  - component: {fileID: 566805858}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -2601,6 +2602,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566805858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566805856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a605b1a74a7bc044483859bfe9d6bfdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 1179202132}
 --- !u!1 &804427958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,7 +2806,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
-  - name: Foostep
+  - name: Footstep
     category: sfx
     clip: {fileID: 8300000, guid: dd62a3ba4f790234bb12d63b5846cac4, type: 3}
     priority: 196
@@ -2800,18 +2814,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
   musics:
-  - name: 
-    category: 
-    clip: {fileID: 0}
-    priority: 0
-    volume: 0
-    pitch: 0
-    loop: 0
-  - name: Music1
+  - name: AAAAA
     category: music
     clip: {fileID: 8300000, guid: 07f209cfccaf9d54a845a30e28236597, type: 3}
     priority: 128
     volume: 1
+    pitch: 1
+    loop: 1
+  - name: Music1
+    category: music
+    clip: {fileID: 8300000, guid: 07f209cfccaf9d54a845a30e28236597, type: 3}
+    priority: 128
+    volume: 0.2
     pitch: 1
     loop: 1
 --- !u!82 &1179202133
