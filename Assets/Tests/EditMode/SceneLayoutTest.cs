@@ -24,5 +24,18 @@ namespace CalangoGames
             Assert.AreEqual(expected: 1, actual: playersInScene.Count);
         }
         
+        [Test]
+        public void ThereIsOnlyOneAudioManagerInScene()
+        {
+            List<AudioManager> audioManagersInScene = new List<AudioManager>();
+
+            foreach (AudioManager audioManager in Resources.FindObjectsOfTypeAll(typeof(AudioManager)) as AudioManager[])
+            {
+                if (!EditorUtility.IsPersistent(audioManager.transform.root.gameObject) && !(audioManager.hideFlags == HideFlags.NotEditable || audioManager.hideFlags == HideFlags.HideAndDontSave))
+                    audioManagersInScene.Add(audioManager);
+            }
+            
+            Assert.AreEqual(expected: 1, actual: audioManagersInScene.Count);
+        }
     }
 }
