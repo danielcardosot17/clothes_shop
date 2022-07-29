@@ -43,9 +43,21 @@ namespace CalangoGames
 
         private void OnInteract(InputAction.CallbackContext obj)
         {
+            Debug.Log("OnInteract");
+            
             PlaySound("Whistle");
             PlayWhistleVFX();
-            Debug.Log("OnInteract");
+            var colliders = Physics2D.OverlapCircleAll(transform.position, actionRadius);
+            foreach(var collider in colliders)
+            {
+                var interactable = collider.GetComponent<IInteractable>();
+                if(interactable != null)
+                {
+                    interactable.Interact();
+                    return; // will get only first interactable
+                }
+            }
+
         }
 
         private void OnDisable() {
