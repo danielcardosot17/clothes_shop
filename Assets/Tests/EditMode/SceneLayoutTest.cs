@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 
@@ -10,19 +11,18 @@ namespace CalangoGames
     {
         // A Test behaves as an ordinary method
         [Test]
-        public void SceneLayoutTestSimplePasses()
+        public void ThereIsOnlyOnePlayerInScene()
         {
-            // Use the Assert class to test conditions
-        }
+            List<PlayerManager> playersInScene = new List<PlayerManager>();
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator SceneLayoutTestWithEnumeratorPasses()
-        {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            foreach (PlayerManager player in Resources.FindObjectsOfTypeAll(typeof(PlayerManager)) as PlayerManager[])
+            {
+                if (!EditorUtility.IsPersistent(player.transform.root.gameObject) && !(player.hideFlags == HideFlags.NotEditable || player.hideFlags == HideFlags.HideAndDontSave))
+                    playersInScene.Add(player);
+            }
+            
+            Assert.AreEqual(expected: 1, actual: playersInScene.Count);
         }
+        
     }
 }
