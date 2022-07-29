@@ -10,7 +10,7 @@ namespace CalangoGames
     {
 
         [SerializeField][Range(0.1f, 10f)] private float moveSpeed = 5;
-        [SerializeField][Range(0.1f, 5f)] private float actionRadious = 2;
+        [SerializeField][Range(0.1f, 5f)] private float actionRadius = 2;
         [SerializeField] private ParticleSystem actionParticleSystem;
         
         private InputActions inputActions;
@@ -21,8 +21,11 @@ namespace CalangoGames
         private Animator animator;
         private bool isTouching = false;
         private bool isWalking = false;
+        private Camera mainCamera;
     
         private void Awake() {
+            mainCamera = Camera.main;
+            animator = GetComponent<Animator>();
             inputActions = new InputActions();
             move = inputActions.Player.MoveKeyboard;
             interact = inputActions.Player.Interact;
@@ -61,6 +64,55 @@ namespace CalangoGames
             Debug.Log("OnTouchEnd");
         }
 
+        private void Update() {
+            MoveKeyboard();
+            MoveTouch();
+        }
 
+        private void MoveKeyboard()
+        {
+            var direction = move.ReadValue<Vector2>();
+            Move(direction);
+        }
+
+        private void Move(Vector2 direction)
+        {
+            if(direction.magnitude > 0)
+            {
+                transform.position += new Vector3(direction.x,direction.y,transform.position.z) * moveSpeed * Time.deltaTime;
+                if(!isWalking)
+                {
+                    isWalking = true;
+                    animator.SetBool("isWalking",isWalking);
+                }
+            }
+            else{
+                if(isWalking)
+                {
+                    isWalking = false;
+                    animator.SetBool("isWalking",isWalking);
+                }
+            }
+        }
+
+        private void MoveTouch()
+        {
+            if(isTouching)
+            {
+                var position = touchPosition.ReadValue<Vector2>();
+                var touchWorldPoint = Camera.main.ScreenToWorldPoint(new Vector3(position.x, position.y, 0));
+                var screenCenterPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width/2, Screen.height/2, 0));
+                var direction = (new Vector2(touchWorldPoint.x, touchWorldPoint.y) - new Vector2(screenCenterPoint.x, screenCenterPoint.y)).normalized;
+
+                Move(direction);
+            }
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            // Display the explosion radius when selected
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, actionRadius);
+        }
     }
 }
