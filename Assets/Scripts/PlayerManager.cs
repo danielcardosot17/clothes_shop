@@ -120,7 +120,7 @@ namespace CalangoGames
 
         private void PlaySound(string soundName)
         {
-            audioManager.Play(soundName, transform.position);
+            audioManager.PlaySFX(soundName, transform.position);
         }
 
         public void PlayFootstepSound()

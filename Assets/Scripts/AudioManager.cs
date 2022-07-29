@@ -6,11 +6,35 @@ namespace CalangoGames
 {
     public class AudioManager : MonoBehaviour
     {
-        public List<Sound> sounds;
-        public void Play(string soundName, Vector3 position)
+        [SerializeField] private List<Sound> soundEffcts;
+        [SerializeField] private List<Sound> musics;
+        private AudioSource audioSource;
+
+
+        private void Awake() {
+            audioSource = GetComponent<AudioSource>();
+            StopMusic();
+        }
+
+        public void StopMusic()
         {
-            if(sounds.Count == 0) return;
-            var sound = sounds.Find(sound => sound.name == soundName);
+            audioSource.Stop();
+        }
+
+        public void PlayMusic(string musicName)
+        {
+            var sound = soundEffcts.Find(sound => sound.name == musicName);
+            audioSource.clip = sound.clip;
+            audioSource.priority = sound.priority;
+            audioSource.volume = sound.volume;
+            audioSource.pitch = sound.pitch;
+            audioSource.Play();
+        }
+
+        public void PlaySFX(string soundName, Vector3 position)
+        {
+            if(soundEffcts.Count == 0) return;
+            var sound = soundEffcts.Find(sound => sound.name == soundName);
             var obj = new GameObject(name: soundName, typeof(AudioSource));
             obj.transform.position = position;
             var source = obj.GetComponent<AudioSource>();
