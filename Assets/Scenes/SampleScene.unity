@@ -2748,6 +2748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1179202131}
+  - component: {fileID: 1179202132}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -2770,6 +2771,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1179202132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179202130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af084848aca07ba4fb1b41a8745b6440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Whistle
+    category: sfx
+    clip: {fileID: 8300000, guid: 2e5989c65d71d3d418d7816ba086f536, type: 3}
+    priority: 128
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: Footstep
+    category: sfx
+    clip: {fileID: 8300000, guid: dd62a3ba4f790234bb12d63b5846cac4, type: 3}
+    priority: 196
+    volume: 0.07
+    pitch: 1
+    loop: 0
 --- !u!1 &1250954032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,9 +2921,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2fdd3d209129e40886427e93785bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 1179202132}
   moveSpeed: 5
   actionRadius: 2
-  actionParticleSystem: {fileID: 0}
+  interactionParticleSystem: {fileID: 553292330131610540, guid: d463964dca0c34c499b1d88f58c97012, type: 3}
 --- !u!4 &1843162388
 Transform:
   m_ObjectHideFlags: 0

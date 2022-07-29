@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -11133,11 +11133,11 @@ TextureImporter:
       roguelikeDungeon_transparent_14: 810048846
       roguelikeDungeon_transparent_481: 1327768292
       roguelikeDungeon_transparent_413: -1785789100
+      roguelikeDungeon_transparent_472: 640712605
       roguelikeDungeon_transparent_140: 2067158428
       roguelikeDungeon_transparent_52: 710251434
       roguelikeDungeon_transparent_346: 814238840
       roguelikeDungeon_transparent_317: 1754590890
-      roguelikeDungeon_transparent_472: 640712605
       roguelikeDungeon_transparent_20: 85047884
       roguelikeDungeon_transparent_82: 1632974106
       roguelikeDungeon_transparent_232: -623668903
@@ -11369,20 +11369,20 @@ TextureImporter:
       roguelikeDungeon_transparent_75: -1157424666
       roguelikeDungeon_transparent_69: -208409302
       roguelikeDungeon_transparent_191: -142386979
-      roguelikeDungeon_transparent_484: 1117562690
+      roguelikeDungeon_transparent_421: -1658826977
       roguelikeDungeon_transparent_142: 1585082296
       roguelikeDungeon_transparent_78: 1646772635
       roguelikeDungeon_transparent_519: 379979454
       roguelikeDungeon_transparent_220: -414730037
       roguelikeDungeon_transparent_296: -947172181
-      roguelikeDungeon_transparent_368: 1020070818
       roguelikeDungeon_transparent_43: -1150412174
-      roguelikeDungeon_transparent_421: -1658826977
       roguelikeDungeon_transparent_479: -499272003
+      roguelikeDungeon_transparent_368: 1020070818
       roguelikeDungeon_transparent_171: -385090875
       roguelikeDungeon_transparent_480: -890335063
       roguelikeDungeon_transparent_470: 765245705
       roguelikeDungeon_transparent_28: -264761797
+      roguelikeDungeon_transparent_484: 1117562690
       roguelikeDungeon_transparent_252: -553536726
       roguelikeDungeon_transparent_13: 1063834041
       roguelikeDungeon_transparent_141: -2087759110

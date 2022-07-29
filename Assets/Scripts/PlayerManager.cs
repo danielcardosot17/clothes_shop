@@ -9,9 +9,10 @@ namespace CalangoGames
     public class PlayerManager : MonoBehaviour
     {
 
+        [SerializeField] private AudioManager audioManager;
         [SerializeField][Range(0.1f, 10f)] private float moveSpeed = 5;
         [SerializeField][Range(0.1f, 5f)] private float actionRadius = 2;
-        [SerializeField] private ParticleSystem actionParticleSystem;
+        [SerializeField] private ParticleSystem interactionParticleSystem;
         
         private InputActions inputActions;
         private InputAction move;
@@ -42,6 +43,8 @@ namespace CalangoGames
 
         private void OnInteract(InputAction.CallbackContext obj)
         {
+            PlaySound("Whistle");
+            PlayWhistleVFX();
             Debug.Log("OnInteract");
         }
 
@@ -113,6 +116,20 @@ namespace CalangoGames
             // Display the explosion radius when selected
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, actionRadius);
+        }
+
+        private void PlaySound(string soundName)
+        {
+            audioManager.Play(soundName, transform.position);
+        }
+
+        public void PlayFootstepSound()
+        {
+            PlaySound("Footstep");
+        }
+        private void PlayWhistleVFX()
+        {
+            Instantiate(interactionParticleSystem, transform.position, Quaternion.identity);
         }
     }
 }

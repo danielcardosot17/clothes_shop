@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -9546,7 +9546,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      roguelikeChar_transparent1_78: 2146506186
+      roguelikeChar_transparent1_334: -1978457085
       roguelikeChar_transparent1_446: -1321238806
       roguelikeChar_transparent1_39: -397862623
       roguelikeChar_transparent1_89: -615182585
@@ -9575,7 +9575,7 @@ TextureImporter:
       roguelikeChar_transparent1_396: 1687629358
       roguelikeChar_transparent1_401: 295812402
       roguelikeChar_transparent1_82: -1235546092
-      roguelikeChar_transparent1_192: -958275841
+      roguelikeChar_transparent1_307: 2036158416
       roguelikeChar_transparent1_166: -411891701
       roguelikeChar_transparent1_175: -548229421
       roguelikeChar_transparent1_36: -729708417
@@ -9584,7 +9584,7 @@ TextureImporter:
       roguelikeChar_transparent1_41: 853001523
       roguelikeChar_transparent1_33: -2133065948
       roguelikeChar_transparent1_274: 729224465
-      roguelikeChar_transparent1_307: 2036158416
+      roguelikeChar_transparent1_192: -958275841
       roguelikeChar_transparent1_12: -1893837707
       roguelikeChar_transparent1_100: 1975594930
       roguelikeChar_transparent1_391: -717661476
@@ -9663,12 +9663,12 @@ TextureImporter:
       roguelikeChar_transparent1_324: 1080922550
       roguelikeChar_transparent1_80: -927302784
       roguelikeChar_transparent1_438: 1655841992
-      roguelikeChar_transparent1_434: 600359515
       roguelikeChar_transparent1_189: -1252928691
+      roguelikeChar_transparent1_278: -315625513
+      roguelikeChar_transparent1_434: 600359515
+      roguelikeChar_transparent1_418: -616495165
       roguelikeChar_transparent1_289: 256887237
       roguelikeChar_transparent1_382: 1484559308
-      roguelikeChar_transparent1_418: -616495165
-      roguelikeChar_transparent1_278: -315625513
       roguelikeChar_transparent1_15: 468546793
       roguelikeChar_transparent1_126: -1514943667
       roguelikeChar_transparent1_413: -908526977
@@ -9993,7 +9993,7 @@ TextureImporter:
       roguelikeChar_transparent1_245: 1567937330
       roguelikeChar_transparent1_172: -995536258
       roguelikeChar_transparent1_188: 104119679
-      roguelikeChar_transparent1_334: -1978457085
+      roguelikeChar_transparent1_78: 2146506186
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

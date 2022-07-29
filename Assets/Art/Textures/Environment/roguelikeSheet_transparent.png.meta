@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -36026,8 +36026,8 @@ TextureImporter:
       roguelikeSheet_transparent_1122: -430587292
       roguelikeSheet_transparent_1566: 1902237712
       roguelikeSheet_transparent_986: 561875087
-      roguelikeSheet_transparent_895: 1262439031
       roguelikeSheet_transparent_1035: 468348653
+      roguelikeSheet_transparent_895: 1262439031
       roguelikeSheet_transparent_844: 417937261
       roguelikeSheet_transparent_1616: 1530697545
       roguelikeSheet_transparent_654: -106877058
@@ -36139,9 +36139,9 @@ TextureImporter:
       roguelikeSheet_transparent_115: -787248213
       roguelikeSheet_transparent_1567: -1206727672
       roguelikeSheet_transparent_1597: -1706461963
-      roguelikeSheet_transparent_954: 997237275
-      roguelikeSheet_transparent_1666: 1607509392
       roguelikeSheet_transparent_1163: -23946692
+      roguelikeSheet_transparent_1666: 1607509392
+      roguelikeSheet_transparent_954: 997237275
       roguelikeSheet_transparent_826: 1582508663
       roguelikeSheet_transparent_0: 1652196923
       roguelikeSheet_transparent_1020: 1919567688
