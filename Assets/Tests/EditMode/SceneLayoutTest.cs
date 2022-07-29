@@ -23,7 +23,7 @@ namespace CalangoGames
             
             Assert.AreEqual(expected: 1, actual: playersInScene.Count);
         }
-        
+
         [Test]
         public void ThereIsOnlyOneAudioManagerInScene()
         {
@@ -36,6 +36,20 @@ namespace CalangoGames
             }
             
             Assert.AreEqual(expected: 1, actual: audioManagersInScene.Count);
+        }
+
+        [Test]
+        public void ThereIsOnlyOneGameMasterInScene()
+        {
+            List<GameMaster> gameMastersInScene = new List<GameMaster>();
+
+            foreach (GameMaster gameMaster in Resources.FindObjectsOfTypeAll(typeof(GameMaster)) as GameMaster[])
+            {
+                if (!EditorUtility.IsPersistent(gameMaster.transform.root.gameObject) && !(gameMaster.hideFlags == HideFlags.NotEditable || gameMaster.hideFlags == HideFlags.HideAndDontSave))
+                    gameMastersInScene.Add(gameMaster);
+            }
+            
+            Assert.AreEqual(expected: 1, actual: gameMastersInScene.Count);
         }
     }
 }
