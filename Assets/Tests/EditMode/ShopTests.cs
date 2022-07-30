@@ -38,7 +38,7 @@ namespace CalangoGames
             buyItems.Add(item2);
             sellItems.Add(item3);
 
-            shopkeeper.SetItemList(buyItems);
+            shopkeeper.ItemsPlayerCanBuy = buyItems;
         }
 
         [TearDown]
@@ -52,7 +52,7 @@ namespace CalangoGames
         {
             // Assing
             // Act
-            moneyManager.TryBuyItem(item1);
+            moneyManager.TryBuyItem(item1, shopkeeper);
             // Assert
             Assert.AreEqual(expected: 0, actual: moneyManager.Money);
         }
@@ -62,7 +62,7 @@ namespace CalangoGames
         {
             // Assing
             // Act
-            moneyManager.TryBuyItem(item2);
+            moneyManager.TryBuyItem(item2, shopkeeper);
             // Assert
             Assert.AreEqual(expected: 100, actual: moneyManager.Money);
         }
@@ -72,9 +72,9 @@ namespace CalangoGames
         {
             // Assing
             // Act
-            moneyManager.TryBuyItem(item1);
+            moneyManager.TryBuyItem(item1, shopkeeper);
             // Assert
-            Assert.AreEqual(expected: false, actual: shopkeeper.GetItemList().Contains(item1));
+            Assert.AreEqual(expected: false, actual: shopkeeper.ItemsPlayerCanBuy.Contains(item1));
         }
     }
 }

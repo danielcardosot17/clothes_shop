@@ -13,13 +13,15 @@ namespace CalangoGames
 
         private ShopManager shopManager;
 
+        public List<Item> ItemsPlayerCanBuy { get => itemsPlayerCanBuy; set => itemsPlayerCanBuy = value; }
+
         private void Awake() {
             shopManager = FindObjectOfType<ShopManager>();    
         }
 
         public void Interact()
         {
-            shopManager.OpenShop(shopName, shopHasSellOption, itemsPlayerCanBuy);
+            shopManager.OpenShop(shopName, shopHasSellOption, ItemsPlayerCanBuy);
         }
     }
 }

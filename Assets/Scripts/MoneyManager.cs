@@ -19,11 +19,12 @@ namespace CalangoGames
             if(money < 0 ) money = 0;
         }
 
-        public void TryBuyItem(Item item)
+        public void TryBuyItem(Item item, Shopkeeper shopkeeper)
         {
             if(money >= item.price)
             {
                 SpendAmount(item.price);
+                shopkeeper.ItemsPlayerCanBuy.Remove(item);
             }
         }
     }
