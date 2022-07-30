@@ -7382,7 +7382,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319608642}
   m_HandleRect: {fileID: 1319608641}
   m_Direction: 2
-  m_Value: 0.8277838
+  m_Value: 0.9999999
   m_Size: 0.29711726
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10892,6 +10892,20 @@ MonoBehaviour:
     volume: 0.07
     pitch: 1
     loop: 0
+  - name: OpenShop
+    category: sfx
+    clip: {fileID: 8300000, guid: a7a7cbd0f802b4f4ea45c85d1151f028, type: 3}
+    priority: 196
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: CloseShop
+    category: sfx
+    clip: {fileID: 8300000, guid: 309851709697351489495fb918292ee0, type: 3}
+    priority: 196
+    volume: 1
+    pitch: 1
+    loop: 0
   musics:
   - name: AAAAA
     category: music
@@ -13905,7 +13919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 84.733444}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1998920902

@@ -33,7 +33,7 @@ namespace CalangoGames
             audioSource.Play();
         }
 
-        public void PlaySFX(string soundName, Vector3 position)
+        public void PlaySFX(string soundName, Vector3 position = new Vector3())
         {
             if(soundEffcts.Count == 0) return;
             var sound = soundEffcts.Find(sound => sound.name == soundName);

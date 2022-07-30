@@ -16,6 +16,7 @@ namespace CalangoGames
         [SerializeField] private Animator shopAnimator;
         [SerializeField] private Camera zoomCamera;
         [SerializeField] private TMP_Text shopNameText;
+        private AudioManager audioManager;
         private MoneyManager moneyManager;
         private InventoryManager inventoryManager;
         private bool isOpen = false;
@@ -23,6 +24,7 @@ namespace CalangoGames
         private void Awake() {
             moneyManager = FindObjectOfType<MoneyManager>();
             inventoryManager = FindObjectOfType<InventoryManager>();
+            audioManager = FindObjectOfType<AudioManager>();
         }
         private void Start() {
             HideShop();
@@ -33,6 +35,7 @@ namespace CalangoGames
             DisableZoomCamera();
             isOpen = false;
             shopAnimator.SetBool("isOpen", isOpen);
+            audioManager.PlaySFX("CloseShop");
             DisableShopCanvas();
         }
 
@@ -70,6 +73,7 @@ namespace CalangoGames
         private void ShowShop()
         {
             EnableShopCanvas();
+            audioManager.PlaySFX("OpenShop");
             isOpen = true;
             shopAnimator.SetBool("isOpen", isOpen);
         }
