@@ -87,5 +87,17 @@ namespace CalangoGames
             // Assert
             Assert.AreEqual(expected: true, actual: inventoryManager.PlayerItems.Contains(item1));
         }
+
+        [Test]
+        public void WhenSellItemThenEarnMoney()
+        {
+            // Assing
+            // Act
+            moneyManager.SellItem(item3, shopkeeper, inventoryManager);
+            // Assert
+            Assert.AreEqual(expected: 200, actual: moneyManager.Money);
+        }
+
+
     }
 }

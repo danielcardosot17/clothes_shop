@@ -28,5 +28,10 @@ namespace CalangoGames
                 inventory.AddItemToInventory(item);
             }
         }
+
+        public void SellItem(Item item3, Shopkeeper shopkeeper, InventoryManager inventoryManager)
+        {
+            
+        }
     }
 }
