@@ -17,17 +17,20 @@ namespace CalangoGames
         Item item2;
         Item item3;
 
+        GameObject gameObject;
+
         [SetUp]
         public void BeforeEveryTest()
         {
-            moneyManager = new MoneyManager();
-            shopManager = new ShopManager();
-            inventoryManager = new InventoryManager();
+            gameObject = new GameObject();
+            moneyManager = gameObject.AddComponent<MoneyManager>();
+            shopManager = gameObject.AddComponent<ShopManager>();
+            inventoryManager = gameObject.AddComponent<InventoryManager>();
             buyItems = new List<Item>();
             sellItems = new List<Item>();
-            item1 = new Item();
-            item2 = new Item();
-            item3 = new Item();
+            item1 = new Item("item1", 100);
+            item2 = new Item("item2", 50);
+            item3 = new Item("item3", 100);
 
             buyItems.Add(item1);
             buyItems.Add(item2);
@@ -45,7 +48,7 @@ namespace CalangoGames
         {
             // Assing
             // Act
-            shopManager.TryBuyItem(item1);
+            moneyManager.TryBuyItem(item1);
             // Assert
             Assert.AreEqual(expected: 0, actual: moneyManager.Money);
         }
