@@ -7,21 +7,23 @@ namespace CalangoGames
 {
     public class InventoryManager : MonoBehaviour
     {
+        [SerializeField] private List<Item> playerItems;
         // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
 
-        // Update is called once per frame
-        void Update()
+        public void AddItemToInventory(Item item)
         {
+            playerItems.Add(item);
+        }
         
+        public void RemoveItemFromInventory(string itemName)
+        {
+            var itemToRemove = playerItems.Find(x => x.itemName == itemName);
+            playerItems.Remove(itemToRemove);
         }
 
         public List<Item> GetPlayerItemsList()
         {
-            return new List<Item>();
+            return playerItems == null ? new List<Item>() : playerItems;
         }
     }
 }

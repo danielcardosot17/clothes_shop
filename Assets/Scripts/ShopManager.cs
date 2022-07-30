@@ -10,19 +10,21 @@ namespace CalangoGames
     {
         [SerializeField] private Canvas shopCanvas;
         [SerializeField] private GameObject sellMenu;
-        [SerializeField] private Transform buyItemList;
-        [SerializeField] private Transform sellItemList;
+        [SerializeField] private Transform buyItemBtnList;
+        [SerializeField] private Transform sellItemBtnList;
         [SerializeField] private Transform itemTemplate;
         [SerializeField] private Animator shopAnimator;
         [SerializeField] private Camera zoomCamera;
         [SerializeField] private TMP_Text shopNameText;
         private AudioManager audioManager;
+        private PlayerManager playerManager;
         private MoneyManager moneyManager;
         private InventoryManager inventoryManager;
         private bool isOpen = false;
 
         private void Awake() {
             moneyManager = FindObjectOfType<MoneyManager>();
+            playerManager = FindObjectOfType<PlayerManager>();
             inventoryManager = FindObjectOfType<InventoryManager>();
             audioManager = FindObjectOfType<AudioManager>();
         }
@@ -37,6 +39,7 @@ namespace CalangoGames
             shopAnimator.SetBool("isOpen", isOpen);
             audioManager.PlaySFX("CloseShop");
             DisableShopCanvas();
+            playerManager.EnablePlayerMoveInput();
         }
 
 
@@ -44,10 +47,10 @@ namespace CalangoGames
         {
             EnableZoomCamera();
             SetShopName(shopName);
-            PopulateItemList(itemsPlayerCanBuy, buyItemList);
+            PopulateItemList(itemsPlayerCanBuy, buyItemBtnList);
             if(shopHasSellOption){
                 EnableSellMenu();
-                PopulateItemList(inventoryManager.GetPlayerItemsList(), sellItemList);
+                PopulateItemList(inventoryManager.GetPlayerItemsList(), sellItemBtnList);
             }
             else
             {
@@ -56,7 +59,7 @@ namespace CalangoGames
             ShowShop();
         }
 
-        private void PopulateItemList(List<Item> itemsPlayerCanBuy, Transform buyItemList)
+        private void PopulateItemList(List<Item> items, Transform buttonList)
         {
             return;
         }
@@ -72,6 +75,7 @@ namespace CalangoGames
 
         private void ShowShop()
         {
+            playerManager.DisablePlayerMoveInput();
             EnableShopCanvas();
             audioManager.PlaySFX("OpenShop");
             isOpen = true;
