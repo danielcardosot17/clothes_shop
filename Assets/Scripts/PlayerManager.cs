@@ -41,6 +41,17 @@ namespace CalangoGames
             inputActions.Player.Enable();
         }
 
+        public void DisablePlayerMoveInput()
+        {
+            inputActions.Player.Disable();
+        }
+
+        public void EnablePlayerMoveInput()
+        {
+            inputActions.Player.Enable();
+        }
+
+
         private void OnInteract(InputAction.CallbackContext obj)
         {
             Debug.Log("OnInteract");

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,10 @@ namespace CalangoGames
 {
     public class Shopkeeper : MonoBehaviour, IInteractable
     {
+        [SerializeField] private List<Item> itemsPlayerCanBuy;
+        [SerializeField] private string shopName;
+        [SerializeField] private bool shopHasSellOption = true;
+
         private ShopManager shopManager;
 
         private void Awake() {
@@ -14,7 +19,7 @@ namespace CalangoGames
 
         public void Interact()
         {
-            Debug.Log("AAAAAAAAAAA");
+            shopManager.OpenShop(shopName, shopHasSellOption, itemsPlayerCanBuy);
         }
     }
 }
