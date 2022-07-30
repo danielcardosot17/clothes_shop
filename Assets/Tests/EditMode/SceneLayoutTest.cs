@@ -65,5 +65,19 @@ namespace CalangoGames
             
             Assert.AreEqual(expected: 1, actual: inventoryManagersInScene.Count);
         }
+
+        [Test]
+        public void ThereIsOnlyOneShopManagerInScene()
+        {
+            List<ShopManager> shopManagersInScene = new List<ShopManager>();
+
+            foreach (ShopManager shopManager in Resources.FindObjectsOfTypeAll(typeof(ShopManager)) as ShopManager[])
+            {
+                if (!EditorUtility.IsPersistent(shopManager.transform.root.gameObject) && !(shopManager.hideFlags == HideFlags.NotEditable || shopManager.hideFlags == HideFlags.HideAndDontSave))
+                    shopManagersInScene.Add(shopManager);
+            }
+            
+            Assert.AreEqual(expected: 1, actual: shopManagersInScene.Count);
+        }
     }
 }
