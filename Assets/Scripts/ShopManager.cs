@@ -54,7 +54,7 @@ namespace CalangoGames
             PopulateItemList(itemsPlayerCanBuy, buyItemBtnList);
             if(shopHasSellOption){
                 EnableSellMenu();
-                PopulateItemList(inventoryManager.GetPlayerItemsList(), sellItemBtnList);
+                PopulateItemList(inventoryManager.PlayerItems, sellItemBtnList);
             }
             else
             {

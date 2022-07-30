@@ -8,22 +8,20 @@ namespace CalangoGames
     public class InventoryManager : MonoBehaviour
     {
         [SerializeField] private List<Item> playerItems;
+
+        public List<Item> PlayerItems { get => playerItems == null ? new List<Item>() : playerItems; set => playerItems = value; }
+
         // Start is called before the first frame update
 
         public void AddItemToInventory(Item item)
         {
-            playerItems.Add(item);
+            PlayerItems.Add(item);
         }
         
         public void RemoveItemFromInventory(string itemName)
         {
-            var itemToRemove = playerItems.Find(x => x.itemName == itemName);
-            playerItems.Remove(itemToRemove);
-        }
-
-        public List<Item> GetPlayerItemsList()
-        {
-            return playerItems == null ? new List<Item>() : playerItems;
+            var itemToRemove = PlayerItems.Find(x => x.itemName == itemName);
+            PlayerItems.Remove(itemToRemove);
         }
     }
 }
