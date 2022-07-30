@@ -29,6 +29,7 @@ namespace CalangoGames
             audioSource.priority = sound.priority;
             audioSource.volume = sound.volume;
             audioSource.pitch = sound.pitch;
+            audioSource.loop = sound.loop;
             audioSource.Play();
         }
 
