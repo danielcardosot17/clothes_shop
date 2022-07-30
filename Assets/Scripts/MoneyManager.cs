@@ -21,7 +21,10 @@ namespace CalangoGames
 
         public void TryBuyItem(Item item)
         {
-            SpendAmount(item.price);
+            if(money >= item.price)
+            {
+                SpendAmount(item.price);
+            }
         }
     }
 }
