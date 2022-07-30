@@ -9,19 +9,19 @@ namespace CalangoGames
     {
         [SerializeField] private List<Item> playerItems;
 
-        public List<Item> PlayerItems { get => playerItems == null ? new List<Item>() : playerItems; set => playerItems = value; }
+        public List<Item> PlayerItems { get => playerItems; set => playerItems = value; }
 
         // Start is called before the first frame update
 
         public void AddItemToInventory(Item item)
         {
-            PlayerItems.Add(item);
+            playerItems.Add(item);
         }
         
         public void RemoveItemFromInventory(string itemName)
         {
             var itemToRemove = PlayerItems.Find(x => x.itemName == itemName);
-            PlayerItems.Remove(itemToRemove);
+            playerItems.Remove(itemToRemove);
         }
     }
 }
