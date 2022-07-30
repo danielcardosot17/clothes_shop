@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CalangoGames
 {
@@ -12,7 +13,7 @@ namespace CalangoGames
         [SerializeField] private GameObject sellMenu;
         [SerializeField] private Transform buyItemBtnList;
         [SerializeField] private Transform sellItemBtnList;
-        [SerializeField] private Transform itemTemplate;
+        [SerializeField] private Transform itemButtonTemplate;
         [SerializeField] private Animator shopAnimator;
         [SerializeField] private Camera zoomCamera;
         [SerializeField] private TMP_Text shopNameText;
@@ -29,7 +30,10 @@ namespace CalangoGames
             audioManager = FindObjectOfType<AudioManager>();
         }
         private void Start() {
-            HideShop();
+            if(isOpen)
+            {
+                HideShop();
+            }
         }
 
         private void HideShop()
@@ -61,7 +65,45 @@ namespace CalangoGames
 
         private void PopulateItemList(List<Item> items, Transform buttonList)
         {
-            return;
+            ClearItemButtonList(buttonList);
+            foreach(var item in items)
+            {
+                var newButton = Instantiate(itemButtonTemplate, buttonList);
+                SetupItemButton(newButton, item);
+            }
+        }
+
+        private void SetupItemButton(Transform newButton, Item item)
+        {
+            SetIcon(newButton.Find("Icon"), item.icon);
+            SetName(newButton.Find("Name"), item.itemName);
+            SetPrice(newButton.Find("Price"), item.price);
+        }
+
+        private void SetPrice(Transform priceTransform, int price)
+        {
+            var priceText = priceTransform.GetComponent<TMP_Text>();
+            priceText.text = price.ToString();
+        }
+
+        private void SetName(Transform nameTransform, string itemName)
+        {
+            var nameText = nameTransform.GetComponent<TMP_Text>();
+            nameText.text = itemName;
+        }
+
+        private void SetIcon(Transform iconTransform, Sprite icon)
+        {
+            var image = iconTransform.GetComponent<Image>();
+            image.sprite = icon;
+        }
+
+        private void ClearItemButtonList(Transform buttonList)
+        {
+            foreach(Transform child in buttonList)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
         }
 
         private void EnableSellMenu()

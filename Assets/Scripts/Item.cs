@@ -9,7 +9,7 @@ namespace CalangoGames
     {
         public string itemName;
         public int price;
-        public Sprite sprite;
+        public Sprite onPlayerSprite;
         public Sprite icon;
     }
 }

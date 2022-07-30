@@ -9799,6 +9799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aea4549de896e444b876dab68adcf09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerItems: []
 --- !u!4 &881035706
 Transform:
   m_ObjectHideFlags: 0
@@ -11088,9 +11089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopCanvas: {fileID: 322437456}
   sellMenu: {fileID: 124611812}
-  buyItemList: {fileID: 1579756764}
-  sellItemList: {fileID: 1998920901}
-  itemTemplate: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
+  buyItemBtnList: {fileID: 1579756764}
+  sellItemBtnList: {fileID: 1998920901}
+  itemButtonTemplate: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
   shopAnimator: {fileID: 322437458}
   zoomCamera: {fileID: 1298445781}
   shopNameText: {fileID: 91816744}
@@ -13620,6 +13621,42 @@ PrefabInstance:
       propertyPath: itemsPlayerCanBuy.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[0].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[1].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f28955d92038974a9b04aafaeea79b0, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[0].price
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[1].price
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[0].itemName
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[1].itemName
+      value: Iron Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[0].onPlayerSprite
+      value: 
+      objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[1].onPlayerSprite
+      value: 
+      objectReference: {fileID: 42211213, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
     - target: {fileID: 2385250263609863550, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: m_RootOrder
       value: 17
