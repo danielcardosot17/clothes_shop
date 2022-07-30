@@ -29,7 +29,7 @@ namespace CalangoGames
             buyItems = new List<Item>();
             sellItems = new List<Item>();
             item1 = new Item("item1", 100);
-            item2 = new Item("item2", 50);
+            item2 = new Item("item2", 150);
             item3 = new Item("item3", 100);
 
             buyItems.Add(item1);
@@ -51,6 +51,16 @@ namespace CalangoGames
             moneyManager.TryBuyItem(item1);
             // Assert
             Assert.AreEqual(expected: 0, actual: moneyManager.Money);
+        }
+
+        [Test]
+        public void WhenTryBuyItemIfMoneyIsNotEnoughThenMoneyIsNotSpent()
+        {
+            // Assing
+            // Act
+            moneyManager.TryBuyItem(item2);
+            // Assert
+            Assert.AreEqual(expected: 100, actual: moneyManager.Money);
         }
     }
 }
