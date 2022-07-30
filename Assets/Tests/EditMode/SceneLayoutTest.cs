@@ -79,5 +79,19 @@ namespace CalangoGames
             
             Assert.AreEqual(expected: 1, actual: shopManagersInScene.Count);
         }
+
+        [Test]
+        public void ThereIsOnlyOneMoneyManagerInScene()
+        {
+            List<MoneyManager> moneyManagersInScene = new List<MoneyManager>();
+
+            foreach (MoneyManager moneyManager in Resources.FindObjectsOfTypeAll(typeof(MoneyManager)) as MoneyManager[])
+            {
+                if (!EditorUtility.IsPersistent(moneyManager.transform.root.gameObject) && !(moneyManager.hideFlags == HideFlags.NotEditable || moneyManager.hideFlags == HideFlags.HideAndDontSave))
+                    moneyManagersInScene.Add(moneyManager);
+            }
+            
+            Assert.AreEqual(expected: 1, actual: moneyManagersInScene.Count);
+        }
     }
 }
