@@ -41,12 +41,11 @@ namespace CalangoGames
         [Test]
         public void WhenItemIsRemovedFromInventoryThenItemIsUnequiped()
         {
-            
             // Assing
             // Act
-            inventoryManager.RemoveItemFromInventory(item1);
+            inventoryManager.RemoveItemFromInventory(item1.itemName);
             // Assert
-            Assert.AreEqual(expected: true, actual: item1.IsEquiped);
+            Assert.AreEqual(expected: false, actual: item1.IsEquiped);
         }
     }
 }

@@ -13,6 +13,9 @@ namespace CalangoGames
         public Sprite onPlayerSprite;
         public Sprite icon;
 
+        private bool isEquiped = false;
+        public bool IsEquiped { get => isEquiped; set => isEquiped = value; }
+
         public Item(string itemName, int buyPrice = 10, int sellPrice = 0, Sprite onPlayerSprite = null, Sprite icon = null)
         {
             this.itemName = itemName;
@@ -21,5 +24,6 @@ namespace CalangoGames
             this.onPlayerSprite = onPlayerSprite;
             this.icon = icon;
         }
+
     }
 }

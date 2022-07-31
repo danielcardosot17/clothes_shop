@@ -21,7 +21,13 @@ namespace CalangoGames
         public void RemoveItemFromInventory(string itemName)
         {
             var itemToRemove = PlayerItems.Find(x => x.itemName == itemName);
+            UnequipItem(itemToRemove);
             playerItems.Remove(itemToRemove);
+        }
+
+        private void UnequipItem(Item itemToRemove)
+        {
+            itemToRemove.IsEquiped = false;
         }
     }
 }
