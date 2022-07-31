@@ -35,7 +35,7 @@ namespace CalangoGames
             DisplayMoney();
         }
 
-        public void TryBuyItem(Item item, Shopkeeper shopkeeper, InventoryManager inventory)
+        public bool TryBuyItem(Item item, Shopkeeper shopkeeper, InventoryManager inventory)
         {
             if(money >= item.buyPrice)
             {
@@ -43,7 +43,9 @@ namespace CalangoGames
                 shopkeeper.ItemsPlayerCanBuy.Remove(item);
                 inventory.AddItemToInventory(item);
                 Debug.Log("You bought the " + item.itemName + "!!");
+                return true;
             }
+            return false;
         }
 
         public void SellItem(Item item, Shopkeeper shopkeeper, InventoryManager inventory)
@@ -51,6 +53,7 @@ namespace CalangoGames
             EarnAmount(item.sellPrice);
             inventory.RemoveItemFromInventory(item.itemName);
             shopkeeper.ItemsPlayerCanBuy.Add(item);
+            shopkeeper.AddItemButtonToBuyList(item);
             Debug.Log("You sold the " + item.itemName + "!!");
         }
     }

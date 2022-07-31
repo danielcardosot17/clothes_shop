@@ -29,6 +29,7 @@ namespace CalangoGames
             inventoryManager = FindObjectOfType<InventoryManager>();
             audioManager = FindObjectOfType<AudioManager>();
         }
+
         private void Start() {
             if(isOpen)
             {
@@ -51,10 +52,12 @@ namespace CalangoGames
         {
             EnableZoomCamera();
             SetShopName(shopkeeper.ShopName);
-            PopulateItemList(shopkeeper,itemsPlayerCanBuy, buyItemBtnList);
+            ClearItemButtonList(buyItemBtnList);
+            PopulateItemList(shopkeeper, itemsPlayerCanBuy);
             if(shopHasSellOption){
                 EnableSellMenu();
-                PopulateItemList(shopkeeper, inventoryManager.PlayerItems, sellItemBtnList, false);
+                ClearItemButtonList(sellItemBtnList);
+                PopulateItemList(shopkeeper, inventoryManager.PlayerItems, false);
             }
             else
             {
@@ -63,26 +66,35 @@ namespace CalangoGames
             ShowShop();
         }
 
-        private void PopulateItemList(Shopkeeper shopkeeper, List<Item> items, Transform buttonList, bool isBuy = true)
+        private void PopulateItemList(Shopkeeper shopkeeper, List<Item> items, bool isBuy = true)
         {
-            ClearItemButtonList(buttonList);
             foreach(var item in items)
             {
-                var newButton = Instantiate(itemButtonTemplate, buttonList);
-                if(isBuy)
-                {
-                    SetupItemButton(newButton, item.icon, item.itemName, item.buyPrice);
-                    newButton.GetComponent<Button>().onClick.AddListener(() => {
-                        moneyManager.TryBuyItem(item, shopkeeper, inventoryManager);
-                    });
-                }
-                else
-                {
-                    SetupItemButton(newButton, item.icon, item.itemName, item.sellPrice);
-                    newButton.GetComponent<Button>().onClick.AddListener(() => {
-                        moneyManager.SellItem(item, shopkeeper, inventoryManager);
-                    });
-                }
+                AddItemButton(shopkeeper, item, isBuy);
+            }
+        }
+
+        public void AddItemButton(Shopkeeper shopkeeper, Item item, bool isBuy = true)
+        {
+            if(isBuy)
+            {
+                var newButton = Instantiate(itemButtonTemplate, buyItemBtnList);
+                SetupItemButton(newButton, item.icon, item.itemName, item.buyPrice);
+                newButton.GetComponent<Button>().onClick.AddListener(() => {
+                    if(moneyManager.TryBuyItem(item, shopkeeper, inventoryManager))
+                    {
+                        GameObject.Destroy(newButton.gameObject);
+                    }
+                });
+            }
+            else
+            {
+                var newButton = Instantiate(itemButtonTemplate, sellItemBtnList);
+                SetupItemButton(newButton, item.icon, item.itemName, item.sellPrice);
+                newButton.GetComponent<Button>().onClick.AddListener(() => {
+                    moneyManager.SellItem(item, shopkeeper, inventoryManager);
+                    GameObject.Destroy(newButton.gameObject);
+                });
             }
         }
 
