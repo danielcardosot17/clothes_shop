@@ -15,6 +15,7 @@ namespace CalangoGames
         private Button rightBtn;
 
         public Button PreviousBtn { get => previousBtn; }
+        public Button NextBtn { get => nextBtn; }
 
         private void Awake() {
             currentButton = gameObject.GetComponent<Button>();
@@ -46,19 +47,19 @@ namespace CalangoGames
             rightBtn = sellButton;
         }
 
-        public void RemoveFromNavigation()
-        {
-            AdjustPreviousButtonNavigation(previousBtn);
-            AdjustNextButtonNavigation(nextBtn);
-        }
+        // public void RemoveFromNavigation()
+        // {
+        //     AdjustPreviousButtonNavigation(previousBtn);
+        //     AdjustNextButtonNavigation(nextBtn);
+        // }
 
-        private void AdjustPreviousButtonNavigation(Button button)
+        public void AdjustPreviousButtonNavigation(Button button)
         {
             var previousBtnNavigation = button.GetComponent<ButtonNavigationManager>();
             previousBtnNavigation.SetNextDownButton(nextBtn);
         }
 
-        private void AdjustNextButtonNavigation(Button button)
+        public void AdjustNextButtonNavigation(Button button)
         {
             var nextBtnNavigation = button.GetComponent<ButtonNavigationManager>();
             nextBtnNavigation.SetPreviousUpButton(previousBtn);

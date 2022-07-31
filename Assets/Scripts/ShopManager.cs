@@ -110,12 +110,17 @@ namespace CalangoGames
                 newButton.onClick.AddListener(() => {
                     if(moneyManager.TryBuyItem(item, shopkeeper, inventoryManager))
                     {
-                        newButtonNavigation.RemoveFromNavigation();
-                        newButtonNavigation.SelectNextButton();
+                        // newButtonNavigation.RemoveFromNavigation();
+                        newButtonNavigation.AdjustPreviousButtonNavigation(newButtonNavigation.PreviousBtn);
                         if(lastBuyButton == newButton)
                         {
                             lastBuyButton = newButtonNavigation.PreviousBtn;
                         }
+                        else
+                        {
+                            newButtonNavigation.AdjustNextButtonNavigation(newButtonNavigation.NextBtn);
+                        }
+                        newButtonNavigation.SelectNextButton();
                         GameObject.Destroy(newButtonTransform.gameObject);
                         audioManager.PlaySFX("BuyItemSFX");
                     }
@@ -142,12 +147,17 @@ namespace CalangoGames
 
                 newButton.onClick.AddListener(() => {
                     moneyManager.SellItem(item, shopkeeper, inventoryManager);
-                    newButtonNavigation.RemoveFromNavigation();
-                    newButtonNavigation.SelectNextButton();
+                    // newButtonNavigation.RemoveFromNavigation();
+                    newButtonNavigation.AdjustPreviousButtonNavigation(newButtonNavigation.PreviousBtn);
                     if(lastSellButton == newButton)
                     {
                         lastSellButton = newButtonNavigation.PreviousBtn;
                     }
+                    else
+                    {
+                        newButtonNavigation.AdjustNextButtonNavigation(newButtonNavigation.NextBtn);
+                    }
+                    newButtonNavigation.SelectNextButton();
                     GameObject.Destroy(newButtonTransform.gameObject);
                     audioManager.PlaySFX("SellItemSFX");
                 });
