@@ -54,7 +54,7 @@ namespace CalangoGames
             PopulateItemList(itemsPlayerCanBuy, buyItemBtnList);
             if(shopHasSellOption){
                 EnableSellMenu();
-                PopulateItemList(inventoryManager.PlayerItems, sellItemBtnList);
+                PopulateItemList(inventoryManager.PlayerItems, sellItemBtnList, false);
             }
             else
             {
@@ -63,21 +63,28 @@ namespace CalangoGames
             ShowShop();
         }
 
-        private void PopulateItemList(List<Item> items, Transform buttonList)
+        private void PopulateItemList(List<Item> items, Transform buttonList, bool isBuy = true)
         {
             ClearItemButtonList(buttonList);
             foreach(var item in items)
             {
                 var newButton = Instantiate(itemButtonTemplate, buttonList);
-                SetupItemButton(newButton, item);
+                if(isBuy)
+                {
+                    SetupItemButton(newButton, item.icon, item.itemName, item.buyPrice);
+                }
+                else
+                {
+                    SetupItemButton(newButton, item.icon, item.itemName, item.sellPrice);
+                }
             }
         }
 
-        private void SetupItemButton(Transform newButton, Item item)
+        private void SetupItemButton(Transform newButton, Sprite icon, string itemName, int price)
         {
-            SetIcon(newButton.Find("Icon"), item.icon);
-            SetName(newButton.Find("Name"), item.itemName);
-            SetPrice(newButton.Find("Price"), item.buyPrice);
+            SetIcon(newButton.Find("Icon"), icon);
+            SetName(newButton.Find("Name"), itemName);
+            SetPrice(newButton.Find("Price"), price);
         }
 
         private void SetPrice(Transform priceTransform, int price)

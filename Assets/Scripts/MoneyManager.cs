@@ -9,7 +9,7 @@ namespace CalangoGames
     public class MoneyManager : MonoBehaviour
     {
         [SerializeField] private TMP_Text moneyText;
-        [SerializeField][Range(0, 300)] private int money = 100;
+        [SerializeField][Range(0, 1000)] private int money = 100;
 
         public int Money { get => money; }
 
