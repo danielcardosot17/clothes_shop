@@ -47,5 +47,15 @@ namespace CalangoGames
             // Assert
             Assert.AreEqual(expected: false, actual: item1.IsEquiped);
         }
+
+        [Test]
+        public void WhenItemIsAddedToInventoryThenItemIsEquiped()
+        {
+            // Assing
+            // Act
+            inventoryManager.AddItemToInventory(item3);
+            // Assert
+            Assert.AreEqual(expected: true, actual: item3.IsEquiped);
+        }
     }
 }
