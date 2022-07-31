@@ -107,6 +107,10 @@ namespace CalangoGames
                     {
                         newButtonNavigation.RemoveFromNavigation();
                         newButtonNavigation.SelectNextButton();
+                        if(lastBuyButton == newButton)
+                        {
+                            lastBuyButton = newButtonNavigation.PreviousBtn;
+                        }
                         GameObject.Destroy(newButtonTransform.gameObject);
                         audioManager.PlaySFX("BuyItemSFX");
                     }
@@ -134,6 +138,10 @@ namespace CalangoGames
                     moneyManager.SellItem(item, shopkeeper, inventoryManager);
                     newButtonNavigation.RemoveFromNavigation();
                     newButtonNavigation.SelectNextButton();
+                    if(lastSellButton == newButton)
+                    {
+                        lastSellButton = newButtonNavigation.PreviousBtn;
+                    }
                     GameObject.Destroy(newButtonTransform.gameObject);
                     audioManager.PlaySFX("SellItemSFX");
                 });

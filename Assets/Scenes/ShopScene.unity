@@ -726,7 +726,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.55
+  m_fontSize: 28.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.35
+  m_fontSize: 25.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4258,7 +4258,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.35
+  m_fontSize: 25.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7408,7 +7408,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1319608641}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.2834907
+  m_Size: 0.24201874
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10607,7 +10607,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.35
+  m_fontSize: 25.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11699,8 +11699,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 595439217}
   m_HandleRect: {fileID: 595439216}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.28349072
+  m_Value: 1
+  m_Size: 0.24201874
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -12142,7 +12142,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.95
+  m_fontSize: 23.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14067,11 +14067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 18236880698842790, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 18236880698842790, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 18236880698842790, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14128,7 +14128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: itemsPlayerCanBuy.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: itemsPlayerCanBuy.Array.data[0].icon
@@ -14136,6 +14136,26 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8f28955d92038974a9b04aafaeea79b0, type: 3}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: itemsPlayerCanBuy.Array.data[1].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[2].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[3].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[4].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[5].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[6].icon
       value: 
       objectReference: {fileID: 21300000, guid: 567fdd2e557fefc478f8aaa7ae56fb11, type: 3}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
@@ -14167,6 +14187,46 @@ PrefabInstance:
       value: Iron Armor
       objectReference: {fileID: 0}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[2].buyPrice
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[2].itemName
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[3].buyPrice
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[3].itemName
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[4].buyPrice
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[4].itemName
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[5].buyPrice
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[5].itemName
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[6].buyPrice
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[6].itemName
+      value: Iron Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: itemsPlayerCanBuy.Array.data[0].sellPrice
       value: 150
       objectReference: {fileID: 0}
@@ -14175,11 +14235,51 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[2].sellPrice
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[3].sellPrice
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[4].sellPrice
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[5].sellPrice
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[6].sellPrice
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: itemsPlayerCanBuy.Array.data[0].onPlayerSprite
       value: 
       objectReference: {fileID: 42211213, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
     - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
       propertyPath: itemsPlayerCanBuy.Array.data[1].onPlayerSprite
+      value: 
+      objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[2].onPlayerSprite
+      value: 
+      objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[3].onPlayerSprite
+      value: 
+      objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[4].onPlayerSprite
+      value: 
+      objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[5].onPlayerSprite
+      value: 
+      objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
+    - target: {fileID: 2385250263609863549, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}
+      propertyPath: itemsPlayerCanBuy.Array.data[6].onPlayerSprite
       value: 
       objectReference: {fileID: -291749321, guid: af3f8689bd5d25941a979e93756c6b4d, type: 3}
     - target: {fileID: 2385250263609863550, guid: a196826c923fd7e43ab5ca79973eac0d, type: 3}

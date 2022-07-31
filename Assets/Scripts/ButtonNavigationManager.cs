@@ -14,6 +14,8 @@ namespace CalangoGames
         private Button leftBtn;
         private Button rightBtn;
 
+        public Button PreviousBtn { get => previousBtn; }
+
         private void Awake() {
             currentButton = gameObject.GetComponent<Button>();
         }
