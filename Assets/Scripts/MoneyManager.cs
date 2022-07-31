@@ -33,6 +33,7 @@ namespace CalangoGames
         {
             EarnAmount(item.sellPrice);
             inventory.RemoveItemFromInventory(item.itemName);
+            shopkeeper.ItemsPlayerCanBuy.Add(item);
         }
 
         private void EarnAmount(int amount)
