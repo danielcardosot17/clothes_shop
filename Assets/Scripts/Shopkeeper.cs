@@ -29,5 +29,10 @@ namespace CalangoGames
         {
             shopManager.AddItemButton(this, item, isBuy: true);
         }
+
+        public void AddItemButtonToSellList(Item item)
+        {
+            shopManager.AddItemButton(this, item, isBuy: false);
+        }
     }
 }

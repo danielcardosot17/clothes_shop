@@ -41,6 +41,7 @@ namespace CalangoGames
             {
                 SpendAmount(item.buyPrice);
                 shopkeeper.ItemsPlayerCanBuy.Remove(item);
+                shopkeeper.AddItemButtonToSellList(item);
                 inventory.AddItemToInventory(item);
                 Debug.Log("You bought the " + item.itemName + "!!");
                 return true;
