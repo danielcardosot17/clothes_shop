@@ -102,6 +102,7 @@ namespace CalangoGames
                     if(moneyManager.TryBuyItem(item, shopkeeper, inventoryManager))
                     {
                         GameObject.Destroy(newButtonTransform.gameObject);
+                        audioManager.PlaySFX("BuyItemSFX");
                     }
                 });
                 AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
@@ -116,6 +117,7 @@ namespace CalangoGames
                 newButton.onClick.AddListener(() => {
                     moneyManager.SellItem(item, shopkeeper, inventoryManager);
                     GameObject.Destroy(newButtonTransform.gameObject);
+                    audioManager.PlaySFX("SellItemSFX");
                 });
                 AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
                 SetButtonNavigation(lastSellButton, newButton);
