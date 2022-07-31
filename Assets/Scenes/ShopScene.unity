@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -4471,7 +4471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -4657,6 +4657,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1998920901}
     m_Modifications:
+    - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
+      propertyPath: m_fontSize
+      value: 46.65
+      objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4745,6 +4749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemButtonTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 5297280038198732905, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
 --- !u!224 &267232334 stripped
@@ -4766,6 +4774,7 @@ GameObject:
   - component: {fileID: 270070115}
   - component: {fileID: 270070118}
   - component: {fileID: 270070119}
+  - component: {fileID: 270070120}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -4937,6 +4946,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &270070120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270070113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9189d684d8233e04eaf700e79c3629ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &315943403
 GameObject:
   m_ObjectHideFlags: 0
@@ -7022,7 +7043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -9657,6 +9678,7 @@ GameObject:
   - component: {fileID: 834799202}
   - component: {fileID: 834799205}
   - component: {fileID: 834799206}
+  - component: {fileID: 834799207}
   m_Layer: 5
   m_Name: BuyBtn
   m_TagString: Untagged
@@ -9832,6 +9854,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &834799207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834799200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9189d684d8233e04eaf700e79c3629ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &863315842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 18236881933489200, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
@@ -10223,6 +10257,7 @@ GameObject:
   - component: {fileID: 1038944356}
   - component: {fileID: 1038944359}
   - component: {fileID: 1038944360}
+  - component: {fileID: 1038944361}
   m_Layer: 5
   m_Name: SellBtn
   m_TagString: Untagged
@@ -10398,6 +10433,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1038944361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038944354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9189d684d8233e04eaf700e79c3629ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1068966904
 GameObject:
   m_ObjectHideFlags: 0
@@ -10627,7 +10674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -10808,7 +10855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -11127,7 +11174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -11245,7 +11292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -11713,7 +11760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -12162,7 +12209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -12406,7 +12453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -13061,7 +13108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -13289,7 +13336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -13618,7 +13665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -14198,7 +14245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.45
+      value: 46.65
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
