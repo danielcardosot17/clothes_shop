@@ -29,9 +29,10 @@ namespace CalangoGames
             }
         }
 
-        public void SellItem(Item item, Shopkeeper shopkeeper, InventoryManager inventoryManager)
+        public void SellItem(Item item, Shopkeeper shopkeeper, InventoryManager inventory)
         {
             EarnAmount(item.sellPrice);
+            inventory.RemoveItemFromInventory(item.itemName);
         }
 
         private void EarnAmount(int amount)

@@ -107,8 +107,5 @@ namespace CalangoGames
             // Assert
             Assert.AreEqual(expected: false, actual: inventoryManager.PlayerItems.Contains(item3));
         }
-
-
-
     }
 }
