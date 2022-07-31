@@ -120,8 +120,8 @@ namespace CalangoGames
                         {
                             newButtonNavigation.AdjustNextButtonNavigation(newButtonNavigation.NextBtn);
                         }
-                        newButtonNavigation.SelectNextButton();
                         GameObject.Destroy(newButtonTransform.gameObject);
+                        newButtonNavigation.SelectNextButton();
                         audioManager.PlaySFX("BuyItemSFX");
                     }
                 });
@@ -157,8 +157,8 @@ namespace CalangoGames
                     {
                         newButtonNavigation.AdjustNextButtonNavigation(newButtonNavigation.NextBtn);
                     }
-                    newButtonNavigation.SelectNextButton();
                     GameObject.Destroy(newButtonTransform.gameObject);
+                    newButtonNavigation.SelectNextButton();
                     audioManager.PlaySFX("SellItemSFX");
                 });
                 AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
