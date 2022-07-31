@@ -77,7 +77,7 @@ namespace CalangoGames
         {
             SetIcon(newButton.Find("Icon"), item.icon);
             SetName(newButton.Find("Name"), item.itemName);
-            SetPrice(newButton.Find("Price"), item.price);
+            SetPrice(newButton.Find("Price"), item.buyPrice);
         }
 
         private void SetPrice(Transform priceTransform, int price)

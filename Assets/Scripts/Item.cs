@@ -8,14 +8,16 @@ namespace CalangoGames
     public class Item
     {
         public string itemName;
-        public int price;
+        public int buyPrice;
+        public int sellPrice;
         public Sprite onPlayerSprite;
         public Sprite icon;
 
-        public Item(string itemName, int price, Sprite onPlayerSprite = null, Sprite icon = null)
+        public Item(string itemName, int buyPrice = 10, int sellPrice = 0, Sprite onPlayerSprite = null, Sprite icon = null)
         {
             this.itemName = itemName;
-            this.price = price;
+            this.buyPrice = buyPrice;
+            this.sellPrice = sellPrice;
             this.onPlayerSprite = onPlayerSprite;
             this.icon = icon;
         }
