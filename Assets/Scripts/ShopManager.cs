@@ -47,14 +47,14 @@ namespace CalangoGames
         }
 
 
-        public void OpenShop(string shopName, bool shopHasSellOption, List<Item> itemsPlayerCanBuy)
+        public void OpenShop(Shopkeeper shopkeeper, bool shopHasSellOption, List<Item> itemsPlayerCanBuy)
         {
             EnableZoomCamera();
-            SetShopName(shopName);
-            PopulateItemList(itemsPlayerCanBuy, buyItemBtnList);
+            SetShopName(shopkeeper.ShopName);
+            PopulateItemList(shopkeeper,itemsPlayerCanBuy, buyItemBtnList);
             if(shopHasSellOption){
                 EnableSellMenu();
-                PopulateItemList(inventoryManager.PlayerItems, sellItemBtnList, false);
+                PopulateItemList(shopkeeper, inventoryManager.PlayerItems, sellItemBtnList, false);
             }
             else
             {
@@ -63,7 +63,7 @@ namespace CalangoGames
             ShowShop();
         }
 
-        private void PopulateItemList(List<Item> items, Transform buttonList, bool isBuy = true)
+        private void PopulateItemList(Shopkeeper shopkeeper, List<Item> items, Transform buttonList, bool isBuy = true)
         {
             ClearItemButtonList(buttonList);
             foreach(var item in items)
@@ -72,10 +72,16 @@ namespace CalangoGames
                 if(isBuy)
                 {
                     SetupItemButton(newButton, item.icon, item.itemName, item.buyPrice);
+                    newButton.GetComponent<Button>().onClick.AddListener(() => {
+                        moneyManager.TryBuyItem(item, shopkeeper, inventoryManager);
+                    });
                 }
                 else
                 {
                     SetupItemButton(newButton, item.icon, item.itemName, item.sellPrice);
+                    newButton.GetComponent<Button>().onClick.AddListener(() => {
+                        moneyManager.SellItem(item, shopkeeper, inventoryManager);
+                    });
                 }
             }
         }

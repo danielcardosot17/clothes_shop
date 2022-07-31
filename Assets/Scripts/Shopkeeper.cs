@@ -14,6 +14,7 @@ namespace CalangoGames
         private ShopManager shopManager;
 
         public List<Item> ItemsPlayerCanBuy { get => itemsPlayerCanBuy; set => itemsPlayerCanBuy = value; }
+        public string ShopName { get => shopName; }
 
         private void Awake() {
             shopManager = FindObjectOfType<ShopManager>();    
@@ -21,7 +22,7 @@ namespace CalangoGames
 
         public void Interact()
         {
-            shopManager.OpenShop(shopName, shopHasSellOption, ItemsPlayerCanBuy);
+            shopManager.OpenShop(this, shopHasSellOption, ItemsPlayerCanBuy);
         }
     }
 }

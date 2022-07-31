@@ -42,6 +42,7 @@ namespace CalangoGames
                 SpendAmount(item.buyPrice);
                 shopkeeper.ItemsPlayerCanBuy.Remove(item);
                 inventory.AddItemToInventory(item);
+                Debug.Log("You bought the " + item.itemName + "!!");
             }
         }
 
@@ -50,6 +51,7 @@ namespace CalangoGames
             EarnAmount(item.sellPrice);
             inventory.RemoveItemFromInventory(item.itemName);
             shopkeeper.ItemsPlayerCanBuy.Add(item);
+            Debug.Log("You sold the " + item.itemName + "!!");
         }
     }
 }
