@@ -22,6 +22,10 @@ namespace CalangoGames
         [SerializeField] private Button buyButton;
         [SerializeField] private Button sellButton;
         [SerializeField] private Button exitButton;
+        [SerializeField] private RectTransform buyScrollRect;
+        [SerializeField] private RectTransform sellScrollRect;
+        [SerializeField] private RectTransform buyContentRect;
+        [SerializeField] private RectTransform sellContentRect;
         private Button lastBuyButton;
         private Button lastSellButton;
         private AudioManager audioManager;
@@ -30,6 +34,7 @@ namespace CalangoGames
         private InventoryManager inventoryManager;
         private EventSystem eventSystem;
         private bool isOpen = false;
+        private RectTransform oldRect;
 
         private void Awake() {
             moneyManager = FindObjectOfType<MoneyManager>();
@@ -116,6 +121,7 @@ namespace CalangoGames
                     }
                 });
                 AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
+                AddEventTriggerForSnapToView(newButtonTransform.GetComponent<EventTrigger>(), newButtonTransform.GetComponent<RectTransform>(), buyScrollRect, buyContentRect);
 
                 currentButtonNavigation.SetNextDownButton(newButton);
                 
@@ -146,6 +152,7 @@ namespace CalangoGames
                     audioManager.PlaySFX("SellItemSFX");
                 });
                 AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
+                AddEventTriggerForSnapToView(newButtonTransform.GetComponent<EventTrigger>(), newButtonTransform.GetComponent<RectTransform>(), sellScrollRect, sellContentRect);
 
                 currentButtonNavigation.SetNextDownButton(newButton);
                 
@@ -155,6 +162,46 @@ namespace CalangoGames
                 
                 lastSellButton = newButton;
             }
+        }
+
+        private void AddEventTriggerForSnapToView(EventTrigger eventTrigger, RectTransform buttonRect, RectTransform scrollRect, RectTransform contentRect)
+        {
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.Select;
+            entry.callback.AddListener((eventData) => { SnapScrollToView(buttonRect, scrollRect, contentRect); });
+
+            eventTrigger.triggers.Add(entry);
+        }
+
+        private void SnapScrollToView(RectTransform currentRect, RectTransform scrollRect, RectTransform contentRect)
+        {
+            Vector2 v = currentRect.position;
+            bool inView = RectTransformUtility.RectangleContainsScreenPoint(scrollRect, v);
+            var incrimentSize = currentRect.rect.height + contentRect.GetComponent<VerticalLayoutGroup>().spacing/2;
+            if(!inView)
+            {
+                if(oldRect != null)
+                {
+                    if (oldRect.localPosition.y < currentRect.localPosition.y)
+                    {
+                        contentRect.anchoredPosition += new Vector2(0, -incrimentSize);
+                    }
+                    else if (oldRect.localPosition.y > currentRect.localPosition.y)
+                    {
+                        contentRect.anchoredPosition += new Vector2(0, incrimentSize);
+                    }
+                }
+            }
+            oldRect = currentRect;
+        }
+
+        public void ResetBuyContentPosition()
+        {
+            buyContentRect.anchoredPosition = Vector2.zero;
+        }
+        public void ResetSellContentPosition()
+        {
+            sellContentRect.anchoredPosition = Vector2.zero;
         }
 
         private void AddEventTriggerForUISFX(EventTrigger eventTrigger)
