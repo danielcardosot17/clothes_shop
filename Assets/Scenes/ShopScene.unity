@@ -4765,6 +4765,7 @@ GameObject:
   - component: {fileID: 270070116}
   - component: {fileID: 270070115}
   - component: {fileID: 270070118}
+  - component: {fileID: 270070119}
   m_Layer: 5
   m_Name: ExitBtn
   m_TagString: Untagged
@@ -4907,6 +4908,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &270070119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270070113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1191004383}
+          m_TargetAssemblyTypeName: CalangoGames.ShopManager, Scripts
+          m_MethodName: PlayUIButtonSelectSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &315943403
 GameObject:
   m_ObjectHideFlags: 0
@@ -9626,6 +9656,7 @@ GameObject:
   - component: {fileID: 834799203}
   - component: {fileID: 834799202}
   - component: {fileID: 834799205}
+  - component: {fileID: 834799206}
   m_Layer: 5
   m_Name: BuyBtn
   m_TagString: Untagged
@@ -9756,6 +9787,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &834799206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834799200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1191004383}
+          m_TargetAssemblyTypeName: CalangoGames.ShopManager, Scripts
+          m_MethodName: PlayUIButtonSelectSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &863315842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 18236881933489200, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
@@ -10146,6 +10206,7 @@ GameObject:
   - component: {fileID: 1038944357}
   - component: {fileID: 1038944356}
   - component: {fileID: 1038944359}
+  - component: {fileID: 1038944360}
   m_Layer: 5
   m_Name: SellBtn
   m_TagString: Untagged
@@ -10276,6 +10337,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1038944360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038944354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1191004383}
+          m_TargetAssemblyTypeName: CalangoGames.ShopManager, Scripts
+          m_MethodName: PlayUIButtonSelectSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1068966904
 GameObject:
   m_ObjectHideFlags: 0
@@ -10852,6 +10942,13 @@ MonoBehaviour:
   - name: CloseShop
     category: sfx
     clip: {fileID: 8300000, guid: 309851709697351489495fb918292ee0, type: 3}
+    priority: 196
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: UIButtonSelect
+    category: sfx
+    clip: {fileID: 8300000, guid: e92a25266cfb64a4e98e5d3db9363f07, type: 3}
     priority: 196
     volume: 1
     pitch: 1

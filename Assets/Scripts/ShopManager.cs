@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace CalangoGames
@@ -21,6 +22,7 @@ namespace CalangoGames
         private PlayerManager playerManager;
         private MoneyManager moneyManager;
         private InventoryManager inventoryManager;
+        private EventSystem eventSystem;
         private bool isOpen = false;
 
         private void Awake() {
@@ -28,17 +30,16 @@ namespace CalangoGames
             playerManager = FindObjectOfType<PlayerManager>();
             inventoryManager = FindObjectOfType<InventoryManager>();
             audioManager = FindObjectOfType<AudioManager>();
+            eventSystem = FindObjectOfType<EventSystem>();
         }
 
         private void Start() {
-            if(isOpen)
-            {
-                HideShop();
-            }
+            DisableEventSystem();
         }
 
         public void HideShop()
         {
+            DisableEventSystem();
             DisableZoomCamera();
             isOpen = false;
             shopAnimator.SetBool("isOpen", isOpen);
@@ -46,6 +47,15 @@ namespace CalangoGames
             playerManager.EnablePlayerMoveInput();
         }
 
+        private void DisableEventSystem()
+        {
+            eventSystem.enabled = false;
+        }
+
+        private void EnableEventSystem()
+        {
+            eventSystem.enabled = true;
+        }
 
         public void OpenShop(Shopkeeper shopkeeper, bool shopHasSellOption, List<Item> itemsPlayerCanBuy)
         {
@@ -142,7 +152,7 @@ namespace CalangoGames
         private void ShowShop()
         {
             playerManager.DisablePlayerMoveInput();
-            EnableShopCanvas();
+            EnableEventSystem();
             audioManager.PlaySFX("OpenShop");
             isOpen = true;
             shopAnimator.SetBool("isOpen", isOpen);
@@ -163,9 +173,9 @@ namespace CalangoGames
             zoomCamera.enabled = false;
         }
 
-        private void EnableShopCanvas()
+        public void PlayUIButtonSelectSFX()
         {
-            shopCanvas.enabled = true;
+            audioManager.PlaySFX("UIButtonSelect");
         }
 
     }
