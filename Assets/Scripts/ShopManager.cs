@@ -19,6 +19,11 @@ namespace CalangoGames
         [SerializeField] private Animator shopAnimator;
         [SerializeField] private Camera zoomCamera;
         [SerializeField] private TMP_Text shopNameText;
+        [SerializeField] private Button buyButton;
+        [SerializeField] private Button sellButton;
+        [SerializeField] private Button exitButton;
+        private Button lastBuyButton;
+        private Button lastSellButton;
         private AudioManager audioManager;
         private PlayerManager playerManager;
         private MoneyManager moneyManager;
@@ -63,10 +68,12 @@ namespace CalangoGames
             EnableZoomCamera();
             SetShopName(shopkeeper.ShopName);
             ClearItemButtonList(buyItemBtnList);
+            lastBuyButton = buyButton;
             PopulateItemList(shopkeeper, itemsPlayerCanBuy);
             if(shopHasSellOption){
                 EnableSellMenu();
                 ClearItemButtonList(sellItemBtnList);
+                lastSellButton = sellButton;
                 PopulateItemList(shopkeeper, inventoryManager.PlayerItems, false);
             }
             else
@@ -88,35 +95,55 @@ namespace CalangoGames
         {
             if(isBuy)
             {
-                var newButton = Instantiate(itemButtonTemplate, buyItemBtnList);
-                SetupItemButton(newButton, item.icon, item.itemName, item.buyPrice);
-                newButton.GetComponent<Button>().onClick.AddListener(() => {
+                var newButtonTransform = Instantiate(itemButtonTemplate, buyItemBtnList);
+                SetupItemButton(newButtonTransform, item.icon, item.itemName, item.buyPrice);
+                var newButton = newButtonTransform.GetComponent<Button>();
+                newButton.onClick.AddListener(() => {
                     if(moneyManager.TryBuyItem(item, shopkeeper, inventoryManager))
                     {
-                        GameObject.Destroy(newButton.gameObject);
+                        GameObject.Destroy(newButtonTransform.gameObject);
                     }
                 });
-                AddEventTriggerForUISFX(newButton);
+                AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
+                SetButtonNavigation(lastBuyButton, newButton);
+                lastBuyButton = newButton;
             }
             else
             {
-                var newButton = Instantiate(itemButtonTemplate, sellItemBtnList);
-                SetupItemButton(newButton, item.icon, item.itemName, item.sellPrice);
-                newButton.GetComponent<Button>().onClick.AddListener(() => {
+                var newButtonTransform = Instantiate(itemButtonTemplate, sellItemBtnList);
+                SetupItemButton(newButtonTransform, item.icon, item.itemName, item.sellPrice);;
+                var newButton = newButtonTransform.GetComponent<Button>();
+                newButton.onClick.AddListener(() => {
                     moneyManager.SellItem(item, shopkeeper, inventoryManager);
-                    GameObject.Destroy(newButton.gameObject);
+                    GameObject.Destroy(newButtonTransform.gameObject);
                 });
-                AddEventTriggerForUISFX(newButton);
+                AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
+                SetButtonNavigation(lastSellButton, newButton);
+                lastSellButton = newButton;
             }
         }
 
-        private void AddEventTriggerForUISFX(Transform button)
+        private void SetButtonNavigation(Button currentButton, Button nextButton)
+        {
+            Navigation navigation = currentButton.navigation;
+            navigation.selectOnDown = nextButton;
+            currentButton.navigation = navigation;
+
+            Navigation nextNavigation = nextButton.navigation;
+            nextNavigation.selectOnUp = currentButton;
+            nextNavigation.selectOnLeft = buyButton;
+            nextNavigation.selectOnRight = sellButton;
+            nextNavigation.selectOnDown = exitButton;
+            nextButton.navigation = nextNavigation;
+        }
+
+        private void AddEventTriggerForUISFX(EventTrigger eventTrigger)
         {
             EventTrigger.Entry entry = new EventTrigger.Entry();
             entry.eventID = EventTriggerType.Deselect;
             entry.callback.AddListener((eventData) => { PlayUIButtonSelectSFX(); });
 
-            button.GetComponent<EventTrigger>().triggers.Add(entry);
+            eventTrigger.triggers.Add(entry);
         }
 
         private void SetupItemButton(Transform newButton, Sprite icon, string itemName, int price)

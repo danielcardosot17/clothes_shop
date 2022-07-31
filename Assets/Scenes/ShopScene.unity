@@ -11365,6 +11365,9 @@ MonoBehaviour:
   shopAnimator: {fileID: 322437458}
   zoomCamera: {fileID: 1298445781}
   shopNameText: {fileID: 91816744}
+  buyButton: {fileID: 834799202}
+  sellButton: {fileID: 1038944356}
+  exitButton: {fileID: 270070115}
 --- !u!4 &1191004384
 Transform:
   m_ObjectHideFlags: 0
