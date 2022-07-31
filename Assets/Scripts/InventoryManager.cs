@@ -15,6 +15,7 @@ namespace CalangoGames
 
         public void AddItemToInventory(Item item)
         {
+            EquipItem(item);
             playerItems.Add(item);
         }
         
@@ -25,9 +26,13 @@ namespace CalangoGames
             playerItems.Remove(itemToRemove);
         }
 
-        private void UnequipItem(Item itemToRemove)
+        private void UnequipItem(Item item)
         {
-            itemToRemove.IsEquiped = false;
+            item.IsEquiped = false;
+        }
+        private void EquipItem(Item item)
+        {
+            item.IsEquiped = true;
         }
     }
 }
