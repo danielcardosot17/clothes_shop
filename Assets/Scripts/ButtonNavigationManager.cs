@@ -61,5 +61,10 @@ namespace CalangoGames
             var nextBtnNavigation = button.GetComponent<ButtonNavigationManager>();
             nextBtnNavigation.SetPreviousUpButton(previousBtn);
         }
+
+        public void SelectNextButton()
+        {
+            nextBtn.Select();
+        }
     }
 }
