@@ -12,6 +12,7 @@ namespace CalangoGames
     {
         [SerializeField] private Canvas shopCanvas;
         [SerializeField] private GameObject sellMenu;
+        [SerializeField] private GameObject buyMenu;
         [SerializeField] private Transform buyItemBtnList;
         [SerializeField] private Transform sellItemBtnList;
         [SerializeField] private Transform itemButtonTemplate;
@@ -176,6 +177,15 @@ namespace CalangoGames
         public void PlayUIButtonSelectSFX()
         {
             audioManager.PlaySFX("UIButtonSelect");
+        }
+
+        public void BringSellMenuForward()
+        {
+            sellMenu.transform.SetAsLastSibling();
+        }
+        public void BringBuyMenuForward()
+        {
+            buyMenu.transform.SetAsLastSibling();
         }
 
     }

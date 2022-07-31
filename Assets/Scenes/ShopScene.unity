@@ -942,7 +942,7 @@ RectTransform:
   - {fileID: 1038944355}
   - {fileID: 556408373}
   m_Father: {fileID: 161860341}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4338,10 +4338,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 270070114}
   - {fileID: 911938981}
   - {fileID: 124611813}
   - {fileID: 876604392}
-  - {fileID: 270070114}
   m_Father: {fileID: 322437457}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4787,7 +4787,7 @@ RectTransform:
   m_Children:
   - {fileID: 160719793}
   m_Father: {fileID: 161860341}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4, y: 0.05}
   m_AnchorMax: {x: 0.6, y: 0.12}
@@ -9816,6 +9816,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1191004383}
+          m_TargetAssemblyTypeName: CalangoGames.ShopManager, Scripts
+          m_MethodName: BringBuyMenuForward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &863315842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 18236881933489200, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
@@ -9953,7 +9969,7 @@ RectTransform:
   - {fileID: 834799201}
   - {fileID: 1404244662}
   m_Father: {fileID: 161860341}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10047,7 +10063,7 @@ RectTransform:
   m_Children:
   - {fileID: 91816743}
   m_Father: {fileID: 161860341}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.86}
   m_AnchorMax: {x: 0.9, y: 0.96}
@@ -10357,6 +10373,22 @@ MonoBehaviour:
         - m_Target: {fileID: 1191004383}
           m_TargetAssemblyTypeName: CalangoGames.ShopManager, Scripts
           m_MethodName: PlayUIButtonSelectSFX
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1191004383}
+          m_TargetAssemblyTypeName: CalangoGames.ShopManager, Scripts
+          m_MethodName: BringSellMenuForward
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11326,6 +11358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopCanvas: {fileID: 322437456}
   sellMenu: {fileID: 124611812}
+  buyMenu: {fileID: 876604391}
   buyItemBtnList: {fileID: 1579756764}
   sellItemBtnList: {fileID: 1998920901}
   itemButtonTemplate: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
