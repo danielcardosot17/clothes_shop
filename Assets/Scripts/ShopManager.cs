@@ -37,13 +37,12 @@ namespace CalangoGames
             }
         }
 
-        private void HideShop()
+        public void HideShop()
         {
             DisableZoomCamera();
             isOpen = false;
             shopAnimator.SetBool("isOpen", isOpen);
             audioManager.PlaySFX("CloseShop");
-            DisableShopCanvas();
             playerManager.EnablePlayerMoveInput();
         }
 
@@ -162,11 +161,6 @@ namespace CalangoGames
         private void DisableZoomCamera()
         {
             zoomCamera.enabled = false;
-        }
-
-        private void DisableShopCanvas()
-        {
-            shopCanvas.enabled = false;
         }
 
         private void EnableShopCanvas()
