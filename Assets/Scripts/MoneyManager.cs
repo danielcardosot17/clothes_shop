@@ -13,10 +13,26 @@ namespace CalangoGames
 
         public int Money { get => money; }
 
+        private void Start() {
+            DisplayMoney();
+        }
+
+        private void DisplayMoney()
+        {
+            moneyText.text = money.ToString();
+        }
+
         public void SpendAmount(int amount)
         {
             money -= amount;
             if(money < 0 ) money = 0;
+            DisplayMoney();
+        }
+
+        private void EarnAmount(int amount)
+        {
+            money += amount;
+            DisplayMoney();
         }
 
         public void TryBuyItem(Item item, Shopkeeper shopkeeper, InventoryManager inventory)
@@ -34,11 +50,6 @@ namespace CalangoGames
             EarnAmount(item.sellPrice);
             inventory.RemoveItemFromInventory(item.itemName);
             shopkeeper.ItemsPlayerCanBuy.Add(item);
-        }
-
-        private void EarnAmount(int amount)
-        {
-            money += amount;
         }
     }
 }

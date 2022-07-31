@@ -726,7 +726,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.15
+  m_fontSize: 33.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.65
+  m_fontSize: 29.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4258,7 +4258,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.65
+  m_fontSize: 29.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7345,7 +7345,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1319608641}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.23787157
+  m_Size: 0.2834907
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10293,7 +10293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b02ffc11890eb384cbc497ecdd910a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyText: {fileID: 0}
+  moneyText: {fileID: 1460218140}
   money: 1000
 --- !u!4 &1068966906
 Transform:
@@ -10426,7 +10426,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.65
+  m_fontSize: 29.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11493,8 +11493,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 595439217}
   m_HandleRect: {fileID: 595439216}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.23787157
+  m_Value: 0.9999999
+  m_Size: 0.28349072
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11936,7 +11936,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
+  m_fontSize: 27.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
