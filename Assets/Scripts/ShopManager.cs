@@ -96,6 +96,7 @@ namespace CalangoGames
                         GameObject.Destroy(newButton.gameObject);
                     }
                 });
+                AddEventTriggerForUISFX(newButton);
             }
             else
             {
@@ -105,7 +106,17 @@ namespace CalangoGames
                     moneyManager.SellItem(item, shopkeeper, inventoryManager);
                     GameObject.Destroy(newButton.gameObject);
                 });
+                AddEventTriggerForUISFX(newButton);
             }
+        }
+
+        private void AddEventTriggerForUISFX(Transform button)
+        {
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.Deselect;
+            entry.callback.AddListener((eventData) => { PlayUIButtonSelectSFX(); });
+
+            button.GetComponent<EventTrigger>().triggers.Add(entry);
         }
 
         private void SetupItemButton(Transform newButton, Sprite icon, string itemName, int price)
