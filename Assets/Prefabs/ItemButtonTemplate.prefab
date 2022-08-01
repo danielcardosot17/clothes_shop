@@ -149,8 +149,8 @@ GameObject:
   - component: {fileID: 5297280037414560264}
   - component: {fileID: 2018804490061839628}
   - component: {fileID: 2639217298200789089}
-  - component: {fileID: 3027066790488888298}
   - component: {fileID: 6623362512124523816}
+  - component: {fileID: 439920008103383470}
   m_Layer: 5
   m_Name: ItemButtonTemplate
   m_TagString: Untagged
@@ -304,19 +304,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3027066790488888298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5297280037414560270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates: []
 --- !u!114 &6623362512124523816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +314,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9189d684d8233e04eaf700e79c3629ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &439920008103383470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297280037414560270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc013d018a9b2f4bad4ae5fb7ef4bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5297280037818843011
@@ -574,7 +573,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.6
+  m_fontSize: 57.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

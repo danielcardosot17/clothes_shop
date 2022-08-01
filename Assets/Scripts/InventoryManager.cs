@@ -38,6 +38,16 @@ namespace CalangoGames
         {
             item.IsEquiped = false;
             RemovePlayerSprite(item);
+            EquipNextItemOfSameType(item.itemType);
+        }
+
+        private void EquipNextItemOfSameType(ItemType itemType)
+        {
+            var nextItem = playerItems.Find(x => (x.itemType == itemType) && (x.IsEquiped));
+            if(nextItem != null)
+            {
+                EquipItem(nextItem);
+            }
         }
 
         private void RemovePlayerSprite(Item item)
