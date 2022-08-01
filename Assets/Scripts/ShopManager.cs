@@ -126,6 +126,9 @@ namespace CalangoGames
                         newButtonNavigation.SelectNextButton();
                         audioManager.PlaySFX("BuyItemSFX");
                     }
+                    else{
+                        audioManager.PlaySFX("NotEnoughMoneySFX");
+                    }
                 });
                 currentButtonNavigation.SetNextDownButton(newButton);
                 

@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -418,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.3
+  m_fontSize: 47.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.65
+  m_fontSize: 41.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4136,7 +4136,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.65
+  m_fontSize: 41.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4349,7 +4349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -4537,7 +4537,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -7285,8 +7285,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319608642}
   m_HandleRect: {fileID: 1319608641}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.27054
+  m_Value: 1
+  m_Size: 0.43577996
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10377,7 +10377,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.65
+  m_fontSize: 41.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10444,7 +10444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -10799,7 +10799,7 @@ MonoBehaviour:
     category: sfx
     clip: {fileID: 8300000, guid: e92a25266cfb64a4e98e5d3db9363f07, type: 3}
     priority: 196
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 0
   - name: BuyItemSFX
@@ -10816,6 +10816,13 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 0
+  - name: NotEnoughMoneySFX
+    category: sfx
+    clip: {fileID: 8300000, guid: 83a521568dd023c41bd0b315ddd22b5e, type: 3}
+    priority: 196
+    volume: 0.1
+    pitch: 1
+    loop: 0
   musics:
   - name: AAAAA
     category: music
@@ -10828,7 +10835,7 @@ MonoBehaviour:
     category: music
     clip: {fileID: 8300000, guid: 07f209cfccaf9d54a845a30e28236597, type: 3}
     priority: 128
-    volume: 0.15
+    volume: 0.05
     pitch: 1
     loop: 1
 --- !u!82 &1179202133
@@ -10944,7 +10951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -11474,7 +11481,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 595439216}
   m_Direction: 2
   m_Value: 0.99999994
-  m_Size: 0.27054
+  m_Size: 0.43577996
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11921,7 +11928,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.4
+  m_fontSize: 39.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11988,7 +11995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -13444,7 +13451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297280036713750488, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_fontSize
-      value: 46.65
+      value: 43.15
       objectReference: {fileID: 0}
     - target: {fileID: 5297280037414560265, guid: d0bdc0a4d6dad4c4ab6e96f6c0d38797, type: 3}
       propertyPath: m_Pivot.x
@@ -13846,11 +13853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 18236880698842790, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 18236880698842790, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 18236880698842790, guid: 5e8907d7fb356614d993fc1496fdde4d, type: 3}
       propertyPath: m_LocalPosition.z
