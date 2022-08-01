@@ -127,9 +127,6 @@ namespace CalangoGames
                         audioManager.PlaySFX("BuyItemSFX");
                     }
                 });
-                // AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
-                // AddEventTriggerForSnapToView(newButtonTransform.GetComponent<EventTrigger>(), newButtonTransform.GetComponent<RectTransform>(), buyScrollRect, buyContentRect);
-
                 currentButtonNavigation.SetNextDownButton(newButton);
                 
                 newButtonNavigation.SetPreviousUpButton(lastBuyButton);
@@ -151,7 +148,6 @@ namespace CalangoGames
 
                 newButton.onClick.AddListener(() => {
                     moneyManager.SellItem(item, shopkeeper, inventoryManager);
-                    // newButtonNavigation.RemoveFromNavigation();
                     newButtonNavigation.AdjustPreviousButtonNavigation(newButtonNavigation.PreviousBtn);
                     if(lastSellButton == newButton)
                     {
@@ -165,9 +161,6 @@ namespace CalangoGames
                     newButtonNavigation.SelectNextButton();
                     audioManager.PlaySFX("SellItemSFX");
                 });
-                // AddEventTriggerForUISFX(newButtonTransform.GetComponent<EventTrigger>());
-                // AddEventTriggerForSnapToView(newButtonTransform.GetComponent<EventTrigger>(), newButtonTransform.GetComponent<RectTransform>(), sellScrollRect, sellContentRect);
-
                 currentButtonNavigation.SetNextDownButton(newButton);
                 
                 newButtonNavigation.SetPreviousUpButton(lastSellButton);
@@ -183,15 +176,6 @@ namespace CalangoGames
             eventHandler.ScrollRect = scrollRect;
             eventHandler.ContentRect = contentRect;
         }
-
-        // private void AddEventTriggerForSnapToView(EventTrigger eventTrigger, RectTransform buttonRect, RectTransform scrollRect, RectTransform contentRect)
-        // {
-        //     EventTrigger.Entry entry = new EventTrigger.Entry();
-        //     entry.eventID = EventTriggerType.Select;
-        //     entry.callback.AddListener((eventData) => { SnapScrollToView(buttonRect, scrollRect, contentRect); });
-
-        //     eventTrigger.triggers.Add(entry);
-        // }
 
         public void SnapScrollToView(RectTransform currentRect, RectTransform scrollRect, RectTransform contentRect)
         {
@@ -223,15 +207,6 @@ namespace CalangoGames
         {
             sellContentRect.anchoredPosition = Vector2.zero;
         }
-
-        // private void AddEventTriggerForUISFX(EventTrigger eventTrigger)
-        // {
-        //     EventTrigger.Entry entry = new EventTrigger.Entry();
-        //     entry.eventID = EventTriggerType.Deselect;
-        //     entry.callback.AddListener((eventData) => { PlayUIButtonSelectSFX(); });
-
-        //     eventTrigger.triggers.Add(entry);
-        // }
 
         private void SetupItemButton(Transform newButton, Sprite icon, string itemName, int price)
         {

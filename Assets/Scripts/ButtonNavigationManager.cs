@@ -47,12 +47,6 @@ namespace CalangoGames
             rightBtn = sellButton;
         }
 
-        // public void RemoveFromNavigation()
-        // {
-        //     AdjustPreviousButtonNavigation(previousBtn);
-        //     AdjustNextButtonNavigation(nextBtn);
-        // }
-
         public void AdjustPreviousButtonNavigation(Button button)
         {
             var previousBtnNavigation = button.GetComponent<ButtonNavigationManager>();
